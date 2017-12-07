@@ -14,7 +14,7 @@ def main(src, dst):
 	for fn in src:
         	name+='%s' % (fn)+" "
 	name+='%s'%(dst)
-	url='www.viu.com/{}'.format(name.replace(" ", "-"))
+	url='www.seriesyou.com/{}'.format(name.replace(" ", "-"))
 	html=requests.get(url)
 	beau=BeautifulSoup(html.content,'html.parser')
 	poster=beau.find_all('p',{'class':'className'})
